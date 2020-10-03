@@ -1,4 +1,4 @@
-var url = 'https://api.covidtracking.com/v1/us/daily.json'; //A local page
+var url = 'https://api.covidtracking.com/v1/us/daily.json';
 
 function load(url) {
   var xhr = new XMLHttpRequest();
@@ -13,4 +13,7 @@ function load(url) {
   xhr.send('');
 }
 console.log("text");
-load(url);
+
+window.setInterval(function(){
+    load(url)
+  }, 10000);
