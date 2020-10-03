@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+	   <title>
+            COVID-19 IN BULGARIA
+        </title>
+        <style>
+            body{background-color: rgb(255, 232, 253);}
+            p {color: black;}
+        </style>
+        <link href="COVID-19 in Bulgaria.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+		<img src="C:\Users\Nick\Downloads\logo.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<div class="navbar">
+  <a href="COVID-19 in Bulgaria.html"><i class="fa fa-fw fa-home"></i>Начало</a>
+  <div class="dropdown">
+    <button class="dropbtn"><i class="fa fa-fw fa-map-marker"></i>Kарта
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="C:\Users\Nick\Desktop\Blagoevgrad.html">Благоевград</a>
+      <a href="C:\Users\Nick\Desktop\Burgas.html">Бургас</a>
+      <a href="C:\Users\Nick\Desktop\Varna.html">Варна</a>
+	  <a href="C:\Users\Nick\Desktop\VelikoTarnovo.html">Велико Търново</a>
+	  <a href="C:\Users\Nick\Desktop\Vidin.html">Видин</a>
+	  <a href="C:\Users\Nick\Desktop\Vraca.html">Враца</a>
+	  <a href="C:\Users\Nick\Desktop\Gabrovo.html">Габрово</a>
+	  <a href="C:\Users\Nick\Desktop\Dobrich.html">Добрич</a>
+	  <a href="C:\Users\Nick\Desktop\Karjali.html">Кърджали</a>
+	  <a href="C:\Users\Nick\Desktop\Kyustendil.html">Кюстендил</a>
+	  <a href="C:\Users\Nick\Desktop\Lovech.html">Ловеч</a>
+	  <a href="C:\Users\Nick\Desktop\Montana.html">Монтана</a>
+	  <a href="C:\Users\Nick\Desktop\Pazarjik.html">Пазарджик</a>
+	  <a href="C:\Users\Nick\Desktop\Pernik.html">Перник</a>
+	  <a href="C:\Users\Nick\Desktop\Pleven.html">Плевен</a>
+	  <a href="C:\Users\Nick\Desktop\Plovdiv.html">Пловдив</a>
+	  <a href="C:\Users\Nick\Desktop\Razgrad.html">Разград</a>
+	  <a href="C:\Users\Nick\Desktop\Ruse.html">Русе</a>
+	  <a href="C:\Users\Nick\Desktop\Silistra.html">Силистра</a>
+	  <a href="C:\Users\Nick\Desktop\Sliven.html">Сливен</a>
+	  <a href="C:\Users\Nick\Desktop\Smolqn.html">Смолян</a>
+	  <a href="C:\Users\Nick\Desktop\Sofia-grad.html">София-град</a>
+	  <a href="C:\Users\Nick\Desktop\Sofia-oblast.html">София-област</a>
+	  <a href="C:\Users\Nick\Desktop\StaraZagora.html">Стара Загора</a>
+	  <a href="C:\Users\Nick\Desktop\Tyurgovishte.html">Търговище</a>
+	  <a href="C:\Users\Nick\Desktop\Haskovo.html">Хасково</a>
+	  <a href="C:\Users\Nick\Desktop\Shumen.html">Шумен</a>
+	  <a href="C:\Users\Nick\Desktop\Qmbol.html">Ямбол</a>
+	  
+	  
+	  
+    </div>
+  </div>
+		<a href="C:\Users\Nick\Desktop\Kontakti.html"><i class="fa fa-fw fa-envelope"></i>Контакти</a>
+
+</div>
+
+
+	
+
+</div>
+
+<style> .navbar {
+  width: 100%;
+  background-color: rgb(255, 179, 217);
+  overflow: auto;
+}
+
+
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: rgb(77, 77, 77);
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.navbar a:hover {
+  background-color: rgb(250, 234, 245);
+}
+
+.active {
+  background-color: rgb(226, 131, 196);
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+</style>
+
+ 
+</div> 
+
+<style>
+    
+    
+</style>
+        
+        
+        
+        <h1>
+            <p>
+             Tук можете да намерите информация за развитието на covid 19 в България.
+            Освен това има информация за държавни / общински администрации, които са затворени поради инфекция с covid 19.  
+            </p>
+        </h1>
+        <h2>
+            
+            <p>
+                заразени от началото на пандемията:
+                21,096
+                
+                
+            </p>
+            
+            
+            <p>
+                излекувани от началото на пандемията:
+                14,787
+                
+            </p>
+            
+            
+            <p>
+                починали от началото на пандемията:
+                832
+                
+                
+            </p>
+        </h2>
+    </body>
+	
+	
+</html>
