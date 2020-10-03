@@ -19,40 +19,40 @@
 
     <div class="navbar">
         <a href="#home">Начало</a>
-        <a href="#news">Контакти</a>
+        <a href="kontakti.cov19.html">Контакти</a>
         <div class="dropdown">
           <button class="dropbtn">Области
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
             <a href="Blagoevgrad.cov19.html">Благоевград</a>
-    <a href="#">Бургас</a>
-    <a href="#">Варна</a>
-    <a href="#">Велико Търново</a>
-    <a href="#">Видин</a>
-    <a href="#">Враца</a>
-    <a href="#">Габрово</a>
-    <a href="#">Добрич</a>
-    <a href="#">Кърджали</a>
-    <a href="#">Кюстендил</a>
-    <a href="#">Ловеч</a>
-    <a href="#">Монтана</a>
-    <a href="#">Пазарджик</a>
-    <a href="#">Перник</a>
-    <a href="#">Плевен</a>
-    <a href="#">Пловдив</a>
-    <a href="#">Разград</a>
-    <a href="#">Русе</a>
-    <a href="#">Силистра</a>
-    <a href="#">Сливен</a>
-    <a href="#">Смолян</a>
-    <a href="#">София-град</a>
-    <a href="#">София област</a>
-    <a href="#">Стара Загора</a>
-    <a href="#">Търговище</a>
-    <a href="#">Хасково</a>
-    <a href="#">Шумен</a>
-    <a href="#">Ямбол</a>
+    <a href="Burgas.cov19.html">Бургас</a>
+    <a href="Varna.cov19.html">Варна</a>
+    <a href="Veliko Tarnovo.cov19.html">Велико Търново</a>
+    <a href="Vidin.cov19.html">Видин</a>
+    <a href="Vratsa.cov19.html">Враца</a>
+    <a href="Gabravo.cov19.html">Габрово</a>
+    <a href="Dobrich.cov19.html">Добрич</a>
+    <a href="Kardhzali.cov19.html">Кърджали</a>
+    <a href="Kiustendil.cov19.html">Кюстендил</a>
+    <a href="Lovech.cov19.html">Ловеч</a>
+    <a href="Montana.cov19.html">Монтана</a>
+    <a href="Pazardhzik.cov19.html">Пазарджик</a>
+    <a href="Pernik.cov19.html">Перник</a>
+    <a href="Pleven.cov19.html">Плевен</a>
+    <a href="Plovdiv.cov19.html">Пловдив</a>
+    <a href="Razgrad.cov19.html">Разград</a>
+    <a href="Ruse.cov19.html">Русе</a>
+    <a href="Silistra.cov19.html">Силистра</a>
+    <a href="Sliven.cov19.html">Сливен</a>
+    <a href="Smolqn.cov19.html">Смолян</a>
+    <a href="Sofia-grad.cov19.html">София-град</a>
+    <a href="Sofia oblast.cov19.html">София област</a>
+    <a href="Stara Zagora.cov19.html">Стара Загора</a>
+    <a href="Targovishte.cov19.html">Търговище</a>
+    <a href="Haskovo.cov19.html">Хасково</a>
+    <a href="Shumen.cov19.html">Шумен</a>
+    <a href="Yambol.cov19.html">Ямбол</a>
           </div>
         </div>
       </div> 
@@ -126,8 +126,26 @@
 } 
       </style>
 
-        
-        
+     <script>
+         var url = 'https://api.covidtracking.com/v1/us/daily.json'; //A local page
+
+function load(url) {
+  var xhr = new XMLHttpRequest();
+
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4) {
+      console.log(xhr.response);
+    }
+  }
+
+  xhr.open('GET', url, true);
+  xhr.send('');
+}
+console.log("text");
+load(url);
+     </script>
+
+     
         
         <h1>
             <p>
