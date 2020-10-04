@@ -3,7 +3,7 @@
 <html>
     <head>
         <title>
-            Haskovo
+          Kardzhali
         </title>
         <link href="design-cov19.css" rel="stylesheet" type="text/css">
     </head>
@@ -54,17 +54,35 @@
       </div> 
 
 
-<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1nIV7-vdkHjNjXPJ_DpL9Z0OOm2zmTBY1" width="640" height="480"></iframe>
+<iframe src="https://www.google.com/maps/d/embed?mid=1qTupL01i-H2M36hUCpU5yisQFZaxNSyy" width="640" height="480"></iframe>
     
 
 <script>
-    var url = 'https://api.covidtracking.com/v1/us/daily.json'; 
-    function load(url) {
+  var url = 'https://api.covidtracking.com/v1/us/daily.json'; 
+  function load(url) {
+  var xhr = new XMLHttpRequest();
+
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status == 200) {
+      var dataGet = JSON.parse(xhr.response);
+      document.getElementById("TotalInfected").innerHTML = dataGet[212].positive;
+    }
+  }
+
+  xhr.open('GET', url, true);
+  xhr.send('');
+}
+
+window.setInterval(function(){
+    load(url)
+  }, 500);
+
+  function load3(url) {
     var xhr = new XMLHttpRequest();
+  
     xhr.onreadystatechange = function() {
       if (xhr.readyState === 4 && xhr.status == 200) {
         var dataGet = JSON.parse(xhr.response);
-        document.getElementById("TotalInfected").innerHTML = dataGet[214].positive;
         document.getElementById("InfectedPerDay").innerHTML = dataGet[217].positive;
       }
     }
@@ -72,29 +90,29 @@
     xhr.open('GET', url, true);
     xhr.send('');
   }
-  load(url)
+  
   window.setInterval(function(){
-      load(url)
+      load3(url)
     }, 500);
-  
-  </script>
-  
-  <table style="float:right;margin-top: 80px;margin-right: 200px;">
-    <tr>
-    <th style="font-size: 64px;font-family: Arial;color:rgb(255, 195, 85);text-align: center;" id="TotalInfected"></th>
-    </tr>
-    <tr>
-    <td style="font-size: 24px;font-family: Arial;color:rgb(70,70,70);text-align: center;">Заразени от началото на пандемията</td>
-    </tr>
-    <tr style="margin-top:160px !important;">
-    <th style="font-size: 32px;font-family: Arial;color:rgb(255, 195, 85); text-align: center;" id="InfectedPerDay"></th>
-    </tr>
-    <tr>
-    <td style="font-size: 24px;font-family: Arial;color:rgb(70,70,70);text-align:center;">Заразени за деня</td>
-    </tr>
-  
-  
-  </table>
+</script>
+
+<table style="float:right;margin-top: 80px;margin-right: 200px;">
+  <tr>
+  <th style="font-size: 64px;font-family: Arial;color:rgb(255, 195, 85);text-align: center;" id="TotalInfected"></th>
+  </tr>
+  <tr>
+  <td style="font-size: 24px;font-family: Arial;color:rgb(70,70,70);text-align: center;">Заразени от началото на пандемията</td>
+  </tr>
+  <tr style="margin-top:160px !important;">
+  <th style="font-size: 32px;font-family: Arial;color:rgb(255, 195, 85); text-align: center;" id="InfectedPerDay"></th>
+  </tr>
+  <tr>
+  <td style="font-size: 24px;font-family: Arial;color:rgb(70,70,70);text-align:center;">Заразени за деня</td>
+  </tr>
+
+
+</table>
+
 
 
 </body>

@@ -3,7 +3,7 @@
 <html>
     <head>
         <title>
-            Haskovo
+            Yambol
         </title>
         <link href="design-cov19.css" rel="stylesheet" type="text/css">
     </head>
@@ -53,18 +53,20 @@
         <a href="kontakti.html"><i class="fa fa-envelope"></i> Контакти</a>
       </div> 
 
+     
 
-<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1nIV7-vdkHjNjXPJ_DpL9Z0OOm2zmTBY1" width="640" height="480"></iframe>
+<iframe src="https://www.google.com/maps/d/embed?mid=12DDzM4jAcFn_T3Bw54StBDdnpFOsSUrP" width="640" height="480"></iframe>
     
 
 <script>
     var url = 'https://api.covidtracking.com/v1/us/daily.json'; 
     function load(url) {
     var xhr = new XMLHttpRequest();
+  
     xhr.onreadystatechange = function() {
       if (xhr.readyState === 4 && xhr.status == 200) {
         var dataGet = JSON.parse(xhr.response);
-        document.getElementById("TotalInfected").innerHTML = dataGet[214].positive;
+        document.getElementById("TotalInfected").innerHTML = dataGet[211].positive;
         document.getElementById("InfectedPerDay").innerHTML = dataGet[217].positive;
       }
     }
@@ -95,7 +97,6 @@
   
   
   </table>
-
 
 </body>
 </html>

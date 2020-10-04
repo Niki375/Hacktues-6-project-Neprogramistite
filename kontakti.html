@@ -3,9 +3,11 @@
 <html>
     <head>
         <title>
-            Haskovo
+            kontakti.html
         </title>
         <link href="design-cov19.css" rel="stylesheet" type="text/css">
+        <link href="kontakti.css" rel="stylesheet" type="text/css">
+            
     </head>
 <body>
     <img src = "logo.png">
@@ -53,49 +55,64 @@
         <a href="kontakti.html"><i class="fa fa-envelope"></i> Контакти</a>
       </div> 
 
+      <div class="container">
+        <div style="text-align:center">
+          <h2>Моля въведете адреса на затворен поради противоепидемични мерки обект</h2>
+        </div>
+        <div class="row">
+          <div class="column">
+            <form name="myForm" action="?submitted" onsubmit="return validation()" method="post">
+              <label for="username">Име:</label>
+              <input type="text" id="username" name="username" required>
+              <label for="username">Имейл:</label>
+              <input type="text" id="username" name="username" required>
+              <label for="username">Описание:</label>
+              <input type="text" id="username" name="username" required>
+              <button id="myBtn" class="button">Изпращане</button>
+            </form>
+               
 
-<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1nIV7-vdkHjNjXPJ_DpL9Z0OOm2zmTBY1" width="640" height="480"></iframe>
-    
 
-<script>
-    var url = 'https://api.covidtracking.com/v1/us/daily.json'; 
-    function load(url) {
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === 4 && xhr.status == 200) {
-        var dataGet = JSON.parse(xhr.response);
-        document.getElementById("TotalInfected").innerHTML = dataGet[214].positive;
-        document.getElementById("InfectedPerDay").innerHTML = dataGet[217].positive;
-      }
-    }
+
+<div id="myModal" class="modal">
+
   
-    xhr.open('GET', url, true);
-    xhr.send('');
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Изпратено успешно!</p>
+  </div>
+
+</div> 
+
+          </div>
+        </div>
+      </div>
+
+      <script>
+
+var modal = document.getElementById("myModal");
+
+var btn = document.getElementById("myBtn");
+
+var span = document.getElementsByClassName("close")[0];
+
+if (window.location.search.includes('submitted')) {
+           modal.style.display = "block";
+        }
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
   }
-  load(url)
-  window.setInterval(function(){
-      load(url)
-    }, 500);
-  
-  </script>
-  
-  <table style="float:right;margin-top: 80px;margin-right: 200px;">
-    <tr>
-    <th style="font-size: 64px;font-family: Arial;color:rgb(255, 195, 85);text-align: center;" id="TotalInfected"></th>
-    </tr>
-    <tr>
-    <td style="font-size: 24px;font-family: Arial;color:rgb(70,70,70);text-align: center;">Заразени от началото на пандемията</td>
-    </tr>
-    <tr style="margin-top:160px !important;">
-    <th style="font-size: 32px;font-family: Arial;color:rgb(255, 195, 85); text-align: center;" id="InfectedPerDay"></th>
-    </tr>
-    <tr>
-    <td style="font-size: 24px;font-family: Arial;color:rgb(70,70,70);text-align:center;">Заразени за деня</td>
-    </tr>
-  
-  
-  </table>
+} 
 
+      </script>
+
+      
 
 </body>
 </html>

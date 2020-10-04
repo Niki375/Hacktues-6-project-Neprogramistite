@@ -3,7 +3,7 @@
 <html>
     <head>
         <title>
-            Haskovo
+            Veliko Tarnovo
         </title>
         <link href="design-cov19.css" rel="stylesheet" type="text/css">
     </head>
@@ -21,51 +21,52 @@
           </button>
           <div class="dropdown-content">
             <a href="Blagoevgrad.html">Благоевград</a>
-    <a href="Burgas.html">Бургас</a>
-    <a href="Varna.html">Варна</a>
-    <a href="Veliko Tarnovo.html">Велико Търново</a>
-    <a href="Vidin.html">Видин</a>
-    <a href="Vratsa.html">Враца</a>
-    <a href="Gabravo.html">Габрово</a>
-    <a href="Dobrich.html">Добрич</a>
-    <a href="Kardhzali.html">Кърджали</a>
-    <a href="Kiustendil.html">Кюстендил</a>
-    <a href="Lovech.html">Ловеч</a>
-    <a href="Montana.html">Монтана</a>
-    <a href="Pazardhzik.html">Пазарджик</a>
-    <a href="Pernik.html">Перник</a>
-    <a href="Pleven.html">Плевен</a>
-    <a href="Plovdiv.html">Пловдив</a>
-    <a href="Razgrad.html">Разград</a>
-    <a href="Ruse.html">Русе</a>
-    <a href="Silistra.html">Силистра</a>
-    <a href="Sliven.html">Сливен</a>
-    <a href="Smolqn.html">Смолян</a>
-    <a href="Sofia-grad.html">София-град</a>
-    <a href="Sofia oblast.html">София област</a>
-    <a href="Stara Zagora.html">Стара Загора</a>
-    <a href="Targovishte.html">Търговище</a>
-    <a href="Haskovo.html">Хасково</a>
-    <a href="Shumen.html">Шумен</a>
-    <a href="Yambol.html">Ямбол</a>
+            <a href="Burgas.html">Бургас</a>
+            <a href="Varna.html">Варна</a>
+            <a href="Veliko Tarnovo.html">Велико Търново</a>
+            <a href="Vidin.html">Видин</a>
+            <a href="Vratsa.html">Враца</a>
+            <a href="Gabravo.html">Габрово</a>
+            <a href="Dobrich.html">Добрич</a>
+            <a href="Kardhzali.html">Кърджали</a>
+            <a href="Kiustendil.html">Кюстендил</a>
+            <a href="Lovech.html">Ловеч</a>
+            <a href="Montana.html">Монтана</a>
+            <a href="Pazardhzik.html">Пазарджик</a>
+            <a href="Pernik.html">Перник</a>
+            <a href="Pleven.html">Плевен</a>
+            <a href="Plovdiv.html">Пловдив</a>
+            <a href="Razgrad.html">Разград</a>
+            <a href="Ruse.html">Русе</a>
+            <a href="Silistra.html">Силистра</a>
+            <a href="Sliven.html">Сливен</a>
+            <a href="Smolqn.html">Смолян</a>
+            <a href="Sofia-grad.html">София-град</a>
+            <a href="Sofia oblast.html">София област</a>
+            <a href="Stara Zagora.html">Стара Загора</a>
+            <a href="Targovishte.html">Търговище</a>
+            <a href="Haskovo.html">Хасково</a>
+            <a href="Shumen.html">Шумен</a>
+            <a href="Yambol.html">Ямбол</a>
           </div>
         </div>
         <a href="kontakti.html"><i class="fa fa-envelope"></i> Контакти</a>
       </div> 
 
-
-<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1nIV7-vdkHjNjXPJ_DpL9Z0OOm2zmTBY1" width="640" height="480"></iframe>
+     
+<iframe src="https://www.google.com/maps/d/embed?mid=1QsYXYPDOqGJ8QpmWhnmoeZV_jkt-h6Dm" width="640" height="480"></iframe>
     
 
 <script>
     var url = 'https://api.covidtracking.com/v1/us/daily.json'; 
     function load(url) {
     var xhr = new XMLHttpRequest();
+  
     xhr.onreadystatechange = function() {
       if (xhr.readyState === 4 && xhr.status == 200) {
         var dataGet = JSON.parse(xhr.response);
-        document.getElementById("TotalInfected").innerHTML = dataGet[214].positive;
-        document.getElementById("InfectedPerDay").innerHTML = dataGet[217].positive;
+        document.getElementById("TotalInfected").innerHTML = dataGet[212].positive;
+        document.getElementById("InfectedPerDay").innerHTML = dataGet[216].positive;
       }
     }
   
@@ -95,7 +96,6 @@
   
   
   </table>
-
 
 </body>
 </html>
