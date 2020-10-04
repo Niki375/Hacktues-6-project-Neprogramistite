@@ -3,9 +3,15 @@
 
 <head>
   <title>
-    Ruse
+    CORONAVIRUS BULGARIA
   </title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="design_cov19.css" rel="stylesheet" type="text/css">
+
+  <script src="index.js">
+  </script>
 </head>
 
 <body>
@@ -15,9 +21,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
-    <a href="Main.html"><i class="fa fa-home"></i> Начало</a>
+    <a href="#home"><i class="fa fa-home"></i> Начало</a>
     <div class="dropdown">
-      <button class="dropbtn"><i class="fas fa-search-location"></i> Области
+      <button class="dropbtn"><i class="fas fa-search-location"></i>  Области</a>
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
@@ -53,53 +59,45 @@
     </div>
     <a href="Kontakti.html"><i class="fa fa-envelope"></i> Контакти</a>
   </div>
-
-
-  <iframe src="https://www.google.com/maps/d/embed?mid=16SBQYAgbn2cohE5eB2rCceXbomqOW4rR" width="640"
-    height="480"></iframe>
-
-  <script>
-    var url = 'https://api.covidtracking.com/v1/us/daily.json';
-    function load(url) {
-      var xhr = new XMLHttpRequest();
-
-      xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status == 200) {
-          var dataGet = JSON.parse(xhr.response);
-          document.getElementById("TotalInfected").innerHTML = dataGet[212].positive;
-          document.getElementById("InfectedPerDay").innerHTML = dataGet[218].positive;
-        }
-      }
-
-      xhr.open('GET', url, true);
-      xhr.send('');
-    }
-    load(url)
-    window.setInterval(function () {
-      load(url)
-    }, 500);
-
-  </script>
-
-  <table style="float:right;margin-top: 80px;margin-right: 200px;">
+  <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1iTAl_rvcW6W9wQUNqsNUAgcMTxkG1W9I" width="1500"
+    height="500"></iframe>
+  <br>
+  <br>
+  <br>
+  <table style="width:100%">
     <tr>
-      <th style="font-size: 64px;font-family: Arial;color:rgb(255, 195, 85);text-align: center;" id="TotalInfected">
-      </th>
+      <th style="font-size: 64px;font-family: Arial;color:rgb(255, 195, 85)" id="TotalInfected"></th>
+      <th style="font-size: 64px;font-family: Arial;color:rgb(255, 83, 83)" id="TotalDeaths"></th>
+      <th style="font-size: 64px;font-family: Arial;color:rgb(107, 252, 107)" id="TotalRecovered"></th>
     </tr>
     <tr>
       <td style="font-size: 24px;font-family: Arial;color:rgb(70,70,70);text-align: center;">Заразени от началото на
         пандемията</td>
+      <td style="font-size: 24px;font-family: Arial;color:rgb(70,70,70);text-align: center;">Починали от началото на
+        пандемията</td>
+      <td style="font-size: 24px;font-family: Arial;color:rgb(70,70,70);text-align: center;">Излекувани от началото на
+        пандемията</td>
     </tr>
-    <tr style="margin-top:160px !important;">
-      <th style="font-size: 32px;font-family: Arial;color:rgb(255, 195, 85); text-align: center;" id="InfectedPerDay">
-      </th>
+  </table>
+  <br>
+  <br>
+  <br>
+  <table style="width:100%">
+    <tr>
+      <th style="font-size: 32px;font-family: Arial;color:rgb(255, 195, 85)" id="InfectedPerDay"></th>
+      <th style="font-size: 32px;font-family: Arial;color:rgb(255, 83, 83)" id="DeathsPerDay"></th>
+      <th style="font-size: 32px;font-family: Arial;color:rgb(107, 252, 107)" id="RecoveredPerDay"></th>
     </tr>
     <tr>
-      <td style="font-size: 24px;font-family: Arial;color:rgb(70,70,70);text-align:center;">Заразени за деня</td>
+      <td style="font-size: 24px;font-family: Arial;color:rgb(70,70,70);text-align: center;">Заразени за деня</td>
+      <td style="font-size: 24px;font-family: Arial;color:rgb(70,70,70);text-align: center;">Починали за деня</td>
+      <td style="font-size: 24px;font-family: Arial;color:rgb(70,70,70);text-align: center;">Излекувани за деня</td>
     </tr>
-
-
   </table>
+
+
+
+
 </body>
 
 </html>
