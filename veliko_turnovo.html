@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    Veliko Tarnovo
+  </title>
+  <link href="design_covid.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+
+<body>
+  <img src="logo.png">
+
+
+  <div class="navbar">
+    <a href="start.html"><i class="fa fa-home"></i> Начало</a>
+    <div class="dropdown">
+      <button class="dropbtn"><i class="fas fa-search-location"></i> Области
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="blagoevgrad.html">Благоевград</a>
+        <a href="burgas.html">Бургас</a>
+        <a href="varna.html">Варна</a>
+        <a href="#">Велико Търново</a>
+        <a href="vidin.html">Видин</a>
+        <a href="vraca.html">Враца</a>
+        <a href="gabrovo.html">Габрово</a>
+        <a href="dobrich.html">Добрич</a>
+        <a href="kurdzhali.html">Кърджали</a>
+        <a href="kustendil.html">Кюстендил</a>
+        <a href="lovech.html">Ловеч</a>
+        <a href="montana.html">Монтана</a>
+        <a href="pazardzhik.html">Пазарджик</a>
+        <a href="pernik.html">Перник</a>
+        <a href="pleven.html">Плевен</a>
+        <a href="plovdiv.html">Пловдив</a>
+        <a href="razgrad.html">Разград</a>
+        <a href="ruse.html">Русе</a>
+        <a href="silistra.html">Силистра</a>
+        <a href="sliven.html">Сливен</a>
+        <a href="smolyan.html">Смолян</a>
+        <a href="sofia-grad.html">София-град</a>
+        <a href="sofia-oblast.html">София-област</a>
+        <a href="stara_zagora.html">Стара Загора</a>
+        <a href="turgovishte.html">Търговище</a>
+        <a href="haskovo.html">Хасково</a>
+        <a href="shumen.html">Шумен</a>
+        <a href="yambol.html">Ямбол</a>
+      </div>
+    </div>
+    <a href="contacts.html"><i class="fa fa-envelope"></i> Контакти</a>
+  </div>
+
+
+  <iframe src="https://www.google.com/maps/d/embed?mid=1QsYXYPDOqGJ8QpmWhnmoeZV_jkt-h6Dm" width="700"
+    height="500"></iframe>
+
+  <script>
+    var url = 'https://api.covidtracking.com/v1/us/daily.json';
+    function load(url) {
+      var xhr = new XMLHttpRequest();
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status == 200) {
+          var dataGet = JSON.parse(xhr.response);
+          document.getElementById("TotalInfected").innerHTML = dataGet[212].positive;
+          document.getElementById("InfectedPerDay").innerHTML = dataGet[216].positive;
+        }
+      }
+
+      xhr.open('GET', url, true);
+      xhr.send('');
+    }
+    load(url)
+    window.setInterval(function () {
+      load(url)
+    }, 500);
+
+  </script>
+
+  <table style="float:right;margin-top: 80px;margin-right: 200px;">
+    <tr>
+      <th style="font-size: 64px;font-family: Arial;color:rgb(255, 195, 85);text-align: center;" id="TotalInfected">
+      </th>
+    </tr>
+    <tr>
+      <td style="font-size: 24px;font-family: Arial;color:rgb(70,70,70);text-align: center;">Заразени от началото на
+        пандемията</td>
+    </tr>
+    <tr style="margin-top:160px !important;">
+      <th style="font-size: 32px;font-family: Arial;color:rgb(255, 195, 85); text-align: center;" id="InfectedPerDay">
+      </th>
+    </tr>
+    <tr>
+      <td style="font-size: 24px;font-family: Arial;color:rgb(70,70,70);text-align:center;">Заразени за деня</td>
+    </tr>
+
+
+  </table>
+</body>
+
+</html>
