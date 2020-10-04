@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Контакти | COVID-19 IN BULGARIA
+        </title>
+        <link href="design_covid.css" rel="stylesheet" type="text/css">
+        <link href="contacts.css" rel="stylesheet" type="text/css">
+            
+    </head>
+<body>
+    <img src = "logo.png">
+
+    <div class="navbar">
+        <a href="start.html">Начало</a>
+        <div class="dropdown">
+          <button class="dropbtn">Области
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="Blagoevgrad.html">Благоевград</a>
+    <a href="Burgas.html">Бургас</a>
+    <a href="Varna.html">Варна</a>
+    <a href="Veliko_turnovo.html">Велико Търново</a>
+    <a href="Vidin.html">Видин</a>
+    <a href="Vraca.html">Враца</a>
+    <a href="Gabravo.html">Габрово</a>
+    <a href="Dobrich.html">Добрич</a>
+    <a href="Kurdzhali.html">Кърджали</a>
+    <a href="Kustendil.html">Кюстендил</a>
+    <a href="Lovech.html">Ловеч</a>
+    <a href="Montana.html">Монтана</a>
+    <a href="Pazardzhik.html">Пазарджик</a>
+    <a href="Pernik.html">Перник</a>
+    <a href="Pleven.html">Плевен</a>
+    <a href="Plovdiv.html">Пловдив</a>
+    <a href="Razgrad.html">Разград</a>
+    <a href="Ruse.html">Русе</a>
+    <a href="Silistra.html">Силистра</a>
+    <a href="Sliven.html">Сливен</a>
+    <a href="Smolyan.html">Смолян</a>
+    <a href="Sofia-grad.html">София-град</a>
+    <a href="Sofia-oblast.html">София-област</a>
+    <a href="Stara_Zagora.html">Стара Загора</a>
+    <a href="Turgovishte.html">Търговище</a>
+    <a href="Haskovo.html">Хасково</a>
+    <a href="Shumen.html">Шумен</a>
+    <a href="Yambol.html">Ямбол</a>
+          </div>
+        </div>
+        <a href="#news">Контакти</a>
+      </div> 
+
+      <div class="container">
+        <div style="text-align:center">
+          <h2>Моля, въведете адреса на затворен поради противоепидемични мерки обект.</h2>
+        </div>
+        <div class="row">
+          <div class="column">
+            <form action="/action_page.php">
+              <label for="name">Име</label>
+              <input type="text" id="name" name="name" placeholder="Име..">
+              <label for="Email">Email</label>
+              <input type="text" email="text" placeholder="Email..">
+              </select>
+              <label for="subject">Затворен обект, адрес</label>
+              <textarea id="subject" name="subject" placeholder="Затворен обект, адрес.." ></textarea>
+            </form>
+
+               
+<button id="myBtn" class="button">Изпращане</button>
+
+
+<div id="myModal" class="modal">
+
+  
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Изпратено успешно!</p>
+  </div>
+
+</div> 
+
+          </div>
+        </div>
+      </div>
+
+      <script>
+
+var modal = document.getElementById("myModal");
+
+var btn = document.getElementById("myBtn");
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+} 
+
+      </script>
+
+      
+
+</body>
+</html>
