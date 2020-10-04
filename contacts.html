@@ -2,9 +2,9 @@
 <html>
     <head>
         <title>
-            Sofia-grad
+            Yambol
         </title>
-        <link href="design_covid.css" rel="stylesheet" type="text/css">
+        <link href="design_contacts.css" rel="stylesheet" type="text/css">
     </head>
 <body>
     <img src = "logo.png">
@@ -38,7 +38,7 @@
 					<a href="silistra.html">Силистра</a>
 					<a href="sliven.html">Сливен</a>
 					<a href="smolyan.html">Смолян</a>
-					<a href="#">София-град</a>
+					<a href="sofia-grad.html">София-град</a>
 					<a href="sofia-oblast.html">София област</a>
 					<a href="stara_zagora.html">Стара Загора</a>
 					<a href="turgovishte.html">Търговище</a>
@@ -47,50 +47,30 @@
 					<a href="yambol.html">Ямбол</a>
           </div>
         </div>
-        <a href="contacts.html">Контакти</a>
+        <a href="#">Контакти</a>
       </div> 
 
-
-<iframe src="https://www.google.com/maps/d/embed?mid=1r9lOMbvhwXNYLubzu_bUgoEPxvJ2Qj8v" width="700" height="500"></iframe>
+<div class="container">
+  <div style="text-align:center">
+    <h2>Свържете се с нас</h2>
+    <p>0887587587</p>
+  </div>
+  <div class="row">
+    <div class="column">
+    </div>
+    <div class="column">
+      <form action="/action_page.php">
+        <label for="fname">Име:</label>
+        <input type="text" id="fname" name="firstname" placeholder="">
+        <label for="lname">Фамилия:</label>
+        <input type="text" id="lname" name="lastname" placeholder="">
+        <label for="subject">Затворен обект, адрес:</label>
+        <textarea id="subject" name="subject" placeholder="" style="height:170px"></textarea>
+        <input type="submit" value="Изпращане">
+      </form>
+    </div>
+  </div>
+</div> 
     
-<script>
-  var url = 'https://api.covidtracking.com/v1/us/daily.json'; 
-  function load(url) {
-  var xhr = new XMLHttpRequest();
-
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4 && xhr.status == 200) {
-      var dataGet = JSON.parse(xhr.response);
-      document.getElementById("TotalInfected").innerHTML = dataGet[202].positive;
-      document.getElementById("InfectedPerDay").innerHTML = dataGet[216].positive;
-    }
-  }
-
-  xhr.open('GET', url, true);
-  xhr.send('');
-}
-load(url)
-
-  window.setInterval(function(){
-      load3(url)
-    }, 500);
-</script>
-
-<table style="float:right;margin-top: 80px;margin-right: 200px;">
-  <tr>
-  <th style="font-size: 64px;font-family: Arial;color:rgb(255, 195, 85);text-align: center;" id="TotalInfected"></th>
-  </tr>
-  <tr>
-  <td style="font-size: 24px;font-family: Arial;color:rgb(70,70,70);text-align: center;">Заразени от началото на пандемията</td>
-  </tr>
-  <tr style="margin-top:160px !important;">
-  <th style="font-size: 32px;font-family: Arial;color:rgb(255, 195, 85); text-align: center;" id="InfectedPerDay"></th>
-  </tr>
-  <tr>
-  <td style="font-size: 24px;font-family: Arial;color:rgb(70,70,70);text-align:center;">Заразени за деня</td>
-  </tr>
-
-
-</table>
 </body>
 </html>
