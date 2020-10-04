@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Pernik
+        </title>
+        <style>
+            body{background-color: rgb(255, 232, 253);}
+            p {color: black;}
+        </style>
+    </head>
+<body>
+    <img src = "C:\Users\Andrey Ivanov\Desktop\chorbid.png">
+        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <div class="navbar">
+        <a href="start.html">Начало</a>
+        <a href="contacts.html">Контакти</a>
+        <div class="dropdown">
+          <button class="dropbtn">Области
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="C:\Users\Andrey Ivanov\Desktop\hacktues\blagoevgrad.html">Благоевград</a>
+            <a href="C:\Users\Andrey Ivanov\Desktop\hacktues\burgas.html">Бургас</a>
+            <a href="C:\Users\Andrey Ivanov\Desktop\hacktues\varna.html">Варна</a>
+            <a href="C:\Users\Andrey Ivanov\Desktop\hacktues\veliko_turnovo.html">Велико Търново</a>
+            <a href="C:\Users\Andrey Ivanov\Desktop\hacktues\vidin.html">Видин</a>
+            <a href="C:\Users\Andrey Ivanov\Desktop\hacktues\vraca.html">Враца</a>
+            <a href="C:\Users\Andrey Ivanov\Desktop\hacktues\gabrovo.html">Габрово</a>
+            <a href="C:\Users\Andrey Ivanov\Desktop\hacktues\dobrich.html">Добрич</a>
+            <a href="C:\Users\Andrey Ivanov\Desktop\hacktues\kurdzhali.html">Кърджали</a>
+            <a href="C:\Users\Andrey Ivanov\Desktop\hacktues\kustendil.html">Кюстендил</a>
+            <a href="C:\Users\Andrey Ivanov\Desktop\hacktues\lovech.html">Ловеч</a>
+            <a href="C:\Users\Andrey Ivanov\Desktop\hacktues\montana.html">Монтана</a>
+            <a href="C:\Users\Andrey Ivanov\Desktop\hacktues\pazardzhik.html">Пазарджик</a>
+            <a href="C:\Users\Andrey Ivanov\Desktop\hacktues\pernik.html">Перник</a>
+            <a href="C:\Users\Andrey Ivanov\Desktop\hacktues\pleven.html">Плевен</a>
+            <a href="C:\Users\Andrey Ivanov\Desktop\hacktues\plovdiv.html">Пловдив</a>
+            <a href="C:\Users\Andrey Ivanov\Desktop\hacktues\razgrad.html">Разград</a>
+            <a href="C:\Users\Andrey Ivanov\Desktop\hacktues\ruse.html">Русе</a>
+            <a href="C:\Users\Andrey Ivanov\Desktop\hacktues\silistra.html">Силистра</a>
+            <a href="C:\Users\Andrey Ivanov\Desktop\hacktues\sliven.html">Сливен</a>
+            <a href="C:\Users\Andrey Ivanov\Desktop\hacktues\smolyan.html">Смолян</a>
+            <a href="C:\Users\Andrey Ivanov\Desktop\hacktues\sofia-grad.html">София-град</a>
+            <a href="C:\Users\Andrey Ivanov\Desktop\hacktues\sofia-oblast.html">София област</a>
+            <a href="C:\Users\Andrey Ivanov\Desktop\hacktues\stara_zagora.html">Стара Загора</a>
+            <a href="C:\Users\Andrey Ivanov\Desktop\hacktues\turgovishte.html">Търговище</a>
+            <a href="C:\Users\Andrey Ivanov\Desktop\hacktues\haskovo.html">Хасково</a>
+            <a href="C:\Users\Andrey Ivanov\Desktop\hacktues\shumen.html">Шумен</a>
+            <a href="C:\Users\Andrey Ivanov\Desktop\hacktues\yambol.html">Ямбол</a>
+          </div>
+        </div>
+      </div> 
+
+      <style>
+           
+        .navbar {
+          overflow: hidden;
+          background-color: #333;
+          font-family: Arial;
+        }
+        
+        .navbar a {
+          float: left;
+          font-size: 16px;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        
+        .dropdown {
+          float: left;
+          overflow: hidden;
+        }
+        
+        
+        .dropdown .dropbtn {
+          font-size: 16px;
+          border: none;
+          outline: none;
+          color: white;
+          padding: 14px 16px;
+          background-color: inherit;
+          font-family: inherit; 
+          margin: 0; 
+        }
+        
+        
+        .navbar a:hover, .dropdown:hover .dropbtn {
+          background-color: red;
+        }
+        
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        
+        .dropdown-content a {
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+        
+        .dropdown-content a:hover {
+          background-color: #ddd;
+        }
+        
+        .dropdown:hover .dropdown-content {
+          display: block;
+        } 
+              </style>
+
+<iframe src="https://www.google.com/maps/d/embed?mid=1_8myKsekKG0DDmIf6YSLlumlPzBVPL2E" width="640" height="480"></iframe>
+    
+<script>
+  var url = 'https://api.covidtracking.com/v1/us/daily.json'; 
+  function load(url) {
+  var xhr = new XMLHttpRequest();
+
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status == 200) {
+      var dataGet = JSON.parse(xhr.response);
+      document.getElementById("TotalInfected").innerHTML = dataGet[213].positive;
+    }
+  }
+
+  xhr.open('GET', url, true);
+  xhr.send('');
+}
+
+window.setInterval(function(){
+    load(url)
+  }, 500);
+
+  function load3(url) {
+    var xhr = new XMLHttpRequest();
+  
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status == 200) {
+        var dataGet = JSON.parse(xhr.response);
+        document.getElementById("InfectedPerDay").innerHTML = dataGet[216].positive;
+      }
+    }
+  
+    xhr.open('GET', url, true);
+    xhr.send('');
+  }
+  
+  window.setInterval(function(){
+      load3(url)
+    }, 500);
+</script>
+
+<table style="width:100%">
+  <tr>
+  <th style="font-size: 64px;font-family: Arial;color:rgb(255, 195, 85)" id="TotalInfected"></th>
+  </tr>
+  <tr>
+  <td style="font-size: 24px;font-family: Arial;color:rgb(70,70,70);text-align: center;">Заразени от началото на пандемията</td>
+  </tr>
+</table>
+<table style="width:100%">
+  <tr>
+  <th style="font-size: 32px;font-family: Arial;color:rgb(255, 195, 85)" id="InfectedPerDay"></th>
+  </tr>
+  <tr>
+  <td style="font-size: 24px;font-family: Arial;color:rgb(70,70,70);text-align: center;">Заразени за деня</td>
+  </tr>
+</table>
+</body>
+</html>
