@@ -1,0 +1,209 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CORONAVIRUS BULGARIA
+        </title>
+        <link href="design-cov19.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+    <img src = "logo.png">
+        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <div class="navbar">
+        <a href="Main.html">Начало</a>
+        <a href="kontakti.html">Контакти</a>
+        <div class="dropdown">
+          <button class="dropbtn">Области
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="Blagoevgrad.html">Благоевград</a>
+            <a href="Burgas.html">Бургас</a>
+            <a href="Veliko Tarnovo.html">Велико Търново</a>
+    <a href="Vidin.html">Видин</a>
+    <a href="Vratsa.html">Враца</a>
+    <a href="Gabravo.html">Габрово</a>
+    <a href="Dobrich.html">Добрич</a>
+    <a href="Kardzhali.html">Кърджали</a>
+    <a href="Kiustendil.html">Кюстендил</a>
+    <a href="Lovech.html">Ловеч</a>
+    <a href="Montana.html">Монтана</a>
+    <a href="Pazardhzik.html">Пазарджик</a>
+    <a href="Pernik.html">Перник</a>
+    <a href="Pleven.html">Плевен</a>
+    <a href="Plovdiv.html">Пловдив</a>
+    <a href="Razgrad.html">Разград</a>
+    <a href="Ruse.html">Русе</a>
+    <a href="Silistra.html">Силистра</a>
+    <a href="Sliven.html">Сливен</a>
+    <a href="Smolqn.html">Смолян</a>
+    <a href="Sofia-grad.html">София-град</a>
+    <a href="Sofia oblast.html">София област</a>
+    <a href="Stara Zagora.html">Стара Загора</a>
+    <a href="Targovishte.html">Търговище</a>
+    <a href="Haskovo.html">Хасково</a>
+    <a href="Shumen.html">Шумен</a>
+    <a href="Yambol.html">Ямбол</a>
+          </div>
+        </div>
+      </div> 
+
+      
+
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1iTAl_rvcW6W9wQUNqsNUAgcMTxkG1W9I" width="1567" height="500"></iframe>
+
+<script>
+var url = 'https://api.covidtracking.com/v1/us/daily.json'; //A local page
+
+function load(url) {
+  var xhr = new XMLHttpRequest();
+
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status == 200) {
+      var dataGet = JSON.parse(xhr.response);
+      document.getElementById("TotalInfected").innerHTML = dataGet[0].positive;
+    }
+  }
+
+  xhr.open('GET', url, true);
+  xhr.send('');
+}
+
+window.setInterval(function(){
+    load(url)
+  }, 500);
+
+//////////////////////////////////////////////////////////
+function load1(url) {
+    var xhr = new XMLHttpRequest();
+  
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status == 200) {
+        var dataGet = JSON.parse(xhr.response);
+        document.getElementById("TotalDeaths").innerHTML = dataGet[0].death;
+      }
+    }
+  
+    xhr.open('GET', url, true);
+    xhr.send('');
+  }
+  
+  window.setInterval(function(){
+      load1(url)
+    }, 500);
+
+//////////////////////////////////////////////////////////////
+function load2(url) {
+    var xhr = new XMLHttpRequest();
+  
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status == 200) {
+        var dataGet = JSON.parse(xhr.response);
+        document.getElementById("TotalRecovered").innerHTML = dataGet[0].recovered;
+      }
+    }
+  
+    xhr.open('GET', url, true);
+    xhr.send('');
+  }
+  
+  window.setInterval(function(){
+      load2(url)
+    }, 500);
+
+////////////////////////////////////////////
+function load3(url) {
+    var xhr = new XMLHttpRequest();
+  
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status == 200) {
+        var dataGet = JSON.parse(xhr.response);
+        document.getElementById("InfectedPerDay").innerHTML = dataGet[188].positive;
+      }
+    }
+  
+    xhr.open('GET', url, true);
+    xhr.send('');
+  }
+  
+  window.setInterval(function(){
+      load3(url)
+    }, 500);
+
+//////////////////////////////////////////////////
+function load4(url) {
+    var xhr = new XMLHttpRequest();
+  
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status == 200) {
+        var dataGet = JSON.parse(xhr.response);
+        document.getElementById("DeathsPerDay").innerHTML = dataGet[188].death;
+      }
+    }
+  
+    xhr.open('GET', url, true);
+    xhr.send('');
+  }
+  
+  window.setInterval(function(){
+      load4(url)
+    }, 500);
+
+////////////////////////////////////////////////////
+function load5(url) {
+    var xhr = new XMLHttpRequest();
+  
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status == 200) {
+        var dataGet = JSON.parse(xhr.response);
+        document.getElementById("RecoveredPerDay").innerHTML = dataGet[188].recovered;
+      }
+    }
+  
+    xhr.open('GET', url, true);
+    xhr.send('');
+  }
+  
+  window.setInterval(function(){
+      load5(url)
+    }, 500);
+  </script>
+
+<br>
+<br>
+<br>
+<table style="width:100%">
+  <tr>
+    <th style="font-size: 64px;font-family: Arial;color:rgb(255, 195, 85)" id="TotalInfected"></th>
+    <th style="font-size: 64px;font-family: Arial;color:rgb(255, 83, 83)" id="TotalDeaths"></th> 
+    <th style="font-size: 64px;font-family: Arial;color:rgb(107, 252, 107)" id="TotalRecovered"></th>
+  </tr>
+  <tr>
+    <td style="font-size: 24px;font-family: Arial;color:rgb(70,70,70);text-align: center;">Заразени от началото на пандемията</td>
+    <td style="font-size: 24px;font-family: Arial;color:rgb(70,70,70);text-align: center;">Починали от началото на пандемията</td>
+    <td style="font-size: 24px;font-family: Arial;color:rgb(70,70,70);text-align: center;">Излекувани от началото на пандемията</td>
+  </tr>
+</table>
+  <br>
+  <br>
+  <br>
+<table style="width:100%">
+  <tr>
+    <th style="font-size: 32px;font-family: Arial;color:rgb(255, 195, 85)" id="InfectedPerDay"></th>
+    <th style="font-size: 32px;font-family: Arial;color:rgb(255, 83, 83)" id="DeathsPerDay"></th> 
+    <th style="font-size: 32px;font-family: Arial;color:rgb(107, 252, 107)" id="RecoveredPerDay"></th>
+  </tr>
+  <tr>
+    <td style="font-size: 24px;font-family: Arial;color:rgb(70,70,70);text-align: center;">Заразени за деня</td>
+    <td style="font-size: 24px;font-family: Arial;color:rgb(70,70,70);text-align: center;">Починали за деня</td>
+    <td style="font-size: 24px;font-family: Arial;color:rgb(70,70,70);text-align: center;">Излекувани за деня</td>
+  </tr>
+</table>
+
+    </body>
+</html>
+
